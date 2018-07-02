@@ -1,174 +1,77 @@
-a {
-    font-family: Roboto;
-    font-weight: 700;
-    text-decoration: underline;
-    color: #111;
-}
-p {
-    display: inline-block;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    color: #111;
-    float: right;
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700,900);
 
-.p-white {
-    color: white;
-}
-.p-center {
-    text-align: center;
-    padding: 0 10% 0 10%;
-    margin-bottom: 40px;
-}
-
-.column {
-    min-height: 80vh;
-    height: 100%;
-}
-
-.column-fixed {
-    width: 45%;
-    position: fixed;
-    height: 100vh;
+.is-vertical-center {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-    z-index: 10;
-    padding: 5vh 0 5vh 0;
-
+    align-content: center;
+    flex-direction: horizontal;
 }
 
-.column-scroll {
-    width: 55%;
-    float: right;
-    min-height: 100vh;
-    background-color: #111;
-}
-
-.title-left {
-    font-family: 'Fira Sans', 'Roboto', 'Arial', sans-serif;
-    font-weight: 900;
-    font-size: 11vw;
-    letter-spacing: -0.025em;
-    color: #111;
-    line-height: 0.725em;
-    text-align: center;
-    display: block;
-
-}
-
-.title-left-small {
-    font-size: 10.5vw;
-    margin-bottom: 0.25em;
-}
-
-.card-dark {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    min-height: 50vh;
-    max-height: 95vh;
-}
-
-.overlay {
-    background-color: #2529d8;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    transition: 0.3s ease;
+.is-vertical-center-alt {
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-family: 'Fira Sans', 'Roboto', sans-serif;
-    font-size: 90px;
+    flex-direction: column;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.title-n {
     color: white;
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-    z-index: 15;
-}
-.card-dark:hover .overlay {
-    opacity: 0.85;
-}
-.img-cover {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 9em;
+    line-height: 1em;
+    margin-bottom: 20px;
 }
 
-.shadow-inset {
-    width: 100%;
-    height: 100%;
+.has-box-shadow {
+    box-shadow: 0px -5px 25px 15px #282f2f;
+    z-index: 2000;
+}
+
+.is-preview {
+    max-height: 7.5em;
+    overflow: hidden;
+}
+
+.float-bottom {
     position: absolute;
-    top: 0;
-    left: 0;
-    box-shadow: inset 0px 0px 50px 0px rgba(0,0,0,0.5);
-    z-index: 5;
+    bottom: 0;
+    left: 25px;
+    right: 25px;
 }
 
-.btn {
-    font-family: 'Fira Sans';
+.has-margin-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel {
+    width: 100vw;
+    height: 420px;
+}
+
+.carousel-item {
+    margin: 15px 15px 15px 15px;
+    min-width: 20vw;
+    max-width: calc(100vw - 30px);
+    width: 480px;
+}
+
+.is-centered-img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hero-section {
+    height: calc(100vh - 100px);
+    background-color: #282f2f;
+    box-shadow: inset 0px -60px 60px -60px rgba(0,0,0,0.75);
+}
+
+#title-huge {
+    font-size: 15em;
     font-weight: 900;
-    -webkit-border-radius: 2;
-    -moz-border-radius: 2;
-    border-radius: 2px;
-    font-family: Roboto;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-    background-color: #111;
-    margin: 8px 5px 8px 5px;
-    transition: background-color 0.2s ease
 }
 
-.btn:hover {
-    background-color: black;
-}
-
-#anaglyph-logo {
-    width: 30%;
-}
-
-i {
-    font-family: jdFontAwesome;
-    display: inline-block;
-    float: left;
-    padding: 0 10px 0 10px;
-    font-size: 30px;
-}
-
-@media screen and (min-width: 1920px) {
-    .title-left {
-        font-size: 230px !important;
-    }
-    .title-left-small {
-        font-size: 200px !important;
-    }
-    #anaglyph-logo {
-        width: 300px;
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .column {
-        width: 100%;
-        position: static;
-        height: auto;
-    }
-
-    .title-left {
-        font-size: 27vw;
-    }
-
-    .title-left-small {
-        font-size: 23.4vw;
-    }
-}
